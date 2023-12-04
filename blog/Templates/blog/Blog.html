@@ -1,0 +1,17 @@
+{% extends "blog/base_generic.html" %}
+{% block content %}
+<h1>{{Blog.title}}</h1>
+<p>
+    <strong>Post date</strong>  {{Blog.date_publication}}
+    <strong>Author</strong><a href="{%url 'blog:bloguer' Blog.id %}">{Blog.id_bloguer}}</a>
+    <strong>Description:</strong><br>{Blog.Description}}
+    <br><br>
+</p>
+<h1>Comments</h1>
+<hr>
+{%for Comments in Blog.comments_set.all %}
+{{Comments.id_bloguer}} ({{Comments.date_publication}})-{{Comments.description}}
+<hr>
+{% endfor %}
+<a>Add a new comment </a>
+{% endblock %}

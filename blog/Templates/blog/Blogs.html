@@ -1,0 +1,12 @@
+{% extends "blog/base_generic.html" %}
+{% block content %}
+<h1>All blogs wa afficher</h1>
+
+<ul>
+
+    {% for blog in Blog %}
+<li> <a href="{%url 'blog:Blog_detail blog.id% '}"> {{blog.title}}</a> ({{blog.Date_publication}}) </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

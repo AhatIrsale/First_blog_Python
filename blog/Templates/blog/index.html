@@ -1,0 +1,13 @@
+{% extends "blog/base_generic.html" %}
+{% block content %}
+<h1>Accueil de la Page Blog</h1>
+<p>Bienvenue à la page Blog, un site web développé par
+<em>Taha</em>!</p>
+<h2>Contenu dynamique</h2>
+<p>La Page Blog dispose des enregistrements suivants:</p>
+<ul>
+<li><strong>Blogs:</strong> {{ num_blogs }}</li>
+<li><strong>Bloguers:</strong> {{ num_bloguers }}</li>
+<li><strong>Comments :</strong> {{ num_comments }}</li>
+</ul>
+{% endblock %}
